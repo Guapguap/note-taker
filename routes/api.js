@@ -3,7 +3,7 @@ const db = require("../db/db.json");
 const fs = require("fs");
 
 // get 
-apiRouter.get("/notes", (req, res) => {
+apiRouter.get("/api/notes", (req, res) => {
     // returns all objects 'notes' pushed into the database
     res.json(db);
 });
