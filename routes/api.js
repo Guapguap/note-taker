@@ -3,7 +3,7 @@ const db = require("../db/db.json");
 const fs = require("fs");
 
 // get 
-apiRouter.get("/api/notes", (req, res) => {
+apiRouter.get("/notes", (req, res) => {
     // returns all objects 'notes' pushed into the database
     res.json(db);
 });
@@ -14,8 +14,9 @@ apiRouter.post("/notes", (req, res) => {
     // add the body from client into the db.json file
     db.push(req.body);
 
-    // return updated db.json file to the client
+    // return updated db.json file 
     fs.writeFile("./db/db.json", JSON.stringify(db), () => {
+    
     res.json(db);
     });
 });
