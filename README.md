@@ -6,7 +6,7 @@
 This application uses an express backend to write and save notes from a JSON file.
 
 # Deployed Application:
-Link to Code Quiz: <a href="https://guapguap.github.io/code-quiz/" target="_blank">https://guapguap.github.io/code-quiz/</a>
+Link to Note Taker: <a href="https://note-taker-by-al.herokuapp.com/" target="_blank">https://note-taker-by-al.herokuapp.com/</a>
 
 # Table of Contents
 * [Installation](#installation)
