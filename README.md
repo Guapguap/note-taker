@@ -2,6 +2,11 @@
 
 ![badge](https://img.shields.io/badge/license-MIT-orange)
 
+# Screenshots:
+![note-taker-by-al herokuapp com_(Nest Hub)](https://user-images.githubusercontent.com/102185104/174459945-456e6080-0573-4928-8e44-18bed1e1e195.png)
+
+![note-taker-by-al herokuapp com_notes(Nest Hub)](https://user-images.githubusercontent.com/102185104/174459948-0e2b8815-3264-454c-aaaa-24455eadc34c.png)
+
 # Description: 
 This application uses an express backend to write and save notes from a JSON file.
 
