@@ -14,11 +14,17 @@ apiRouter.post("/notes", (req, res) => {
     // add the body from client into the db.json file
     db.push(req.body);
 
+    // Add an id to each note
+    db.forEach((obj, i) => {
+        obj.id = i + 1;
+    });
+
     // return updated db.json file 
     fs.writeFile("./db/db.json", JSON.stringify(db), () => {
     
     res.json(db);
     });
+
 });
 
 module.exports = apiRouter;
