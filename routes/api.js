@@ -1,6 +1,7 @@
 const apiRouter = require("express").Router();
 const db = require("../db/db.json");
 const fs = require("fs");
+const { v4: uuidv4 } = require('uuid');
 
 // get
 apiRouter.get("/notes", (req, res) => {
@@ -14,9 +15,9 @@ apiRouter.post("/notes", (req, res) => {
     db.push(req.body);
 
   // Add an id to each note
-    db.forEach((obj, i) => {
+    db.forEach((obj) => {
 
-    obj.id = i + 1;
+    obj.id = uuidv4();
     
 });
 
@@ -30,7 +31,7 @@ apiRouter.post("/notes", (req, res) => {
   // API DELETE Request
     apiRouter.delete("/notes/:id", function (req, res) {
     
-    let id = req.params.id;
+    const id = req.params.id;
 
     // Use splice to delete the selected note from the db array
     db.splice(id - 1, 1);
